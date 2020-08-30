@@ -1,2 +1,2 @@
 build:
-        cd ./src && ./ink-linux ./build.ink
+	cd ./src && ./ink-linux ./build.ink
