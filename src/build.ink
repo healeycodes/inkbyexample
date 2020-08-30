@@ -14,12 +14,12 @@ replace := str.replace
 lower := str.lower
 split := str.split
 
+` index.html `
 renderIndexPage := (allExamples) => (
-    ` render the index page with the list of examples and links `
     exampleList := reduce(allExamples, (acc, item) => (
         acc := acc + f('<li>
-                        <a href="{{ path }}">{{ name }}</a>
-                    </li>', {
+                            <a href="{{ path }}">{{ name }}</a>
+                        </li>', {
             name: item
             path: replace(lower(item), ' ', '-') + '.html'
         })
@@ -27,19 +27,22 @@ renderIndexPage := (allExamples) => (
     readFile('../templates/index.html', index => (
         page := f(index, {
             firstExample: replace(lower(allExamples.0), ' ', '-') + '.html'
-            exampleList: exampleList})
+            exampleList: exampleList
+        })
         writeFile('../public/index.html', page, err => err :: {
             () -> log('error writing index.html')
         })
     ))
 )
 
+` hello-world.html etc.`
 renderExamplePages := (allExamples) => (
     readFile('../templates/example.html', exampleTemplate => (
-
         each(allExamples, (example, i) => (
             fileName := replace(lower(example), ' ', '-')
             data := load('../examples/' + fileName)
+
+            ` this becomes the evaluated example program `
             source := reduce(data.rows, (acc, item) => acc := acc + '
             ' + item.code, '')
 
@@ -51,7 +54,7 @@ renderExamplePages := (allExamples) => (
                         () -> log('error executing program for: ' + example)
                         _ -> (
 
-                            ` pages link to the next example if one exists `
+                            ` pages link to the next example if we're not at the last example `
                             len(allExamples) :: {
                                 (i + 1) -> next := ''
                                 _ -> next := f('<p class="next">
@@ -74,21 +77,24 @@ renderExamplePages := (allExamples) => (
                                                         <td class="code leading {{ class }}">
                                                             <pre>{{ code }}</pre>
                                                         </td>
-                                                    </tr>', {
-                                                        docs: item.docs
-                                                        code: item.code
-                                                        class: class
+                                                    </tr>',
+                                    {
+                                        docs: item.docs
+                                        code: item.code
+                                        class: class
                                     })
                                 ), f('<tr>
-                                        <td class="docs"><p>{{ intro }}</p></td>
-                                        <td class="code leading empty"></td>
-                                    </tr>', {intro: data.intro}))
+                                          <td class="docs"><p>{{ intro }}</p></td>
+                                          <td class="code leading empty"></td>
+                                      </tr>', {
+                                        intro: data.intro
+                                    })
+                                )
                                 program: f('<table>
                                                 <tr>
                                                     <td class="docs"><p>{{ end }}</p></td>
                                                     <td class="code leading">
-                                                        <pre><span class="gp">$</span> ink {{ fileName }}
-<span class="go">{{ result }}</span></pre>
+                                                        <pre><span class="gp">$</span> ink {{ fileName }}<br/><span class="go">{{ result }}</span></pre>
                                                     </td>
                                                 </tr>
                                             </table>', {

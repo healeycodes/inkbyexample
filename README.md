@@ -13,13 +13,11 @@ All tooling is written in Ink and the programs are evaluated as part of the buil
 - A title of `Foo Bar` needs a program named `foo-bar.ink`
 
 ```
-intro := 'The introduction precedes the code sections.
-          It can be left empty.'
+intro := 'The introduction precedes the code sections. It can be left empty.'
 
 rows := [
     {
-        docs: 'A that function adds two numbers together.
-               This text will appear on the left of the code.'
+        docs: 'A that function adds two numbers together. This text will appear on the left of the code.'
         code: 'add := (x, y) => x + y'
     },
     {
@@ -28,8 +26,7 @@ rows := [
     }
 ]
 
-end := 'The end section is on the left of the program output.
-        It can also be left empty.'
+end := 'The end section is on the left of the program output. It can also be left empty.'
 ```
 
 <br>
