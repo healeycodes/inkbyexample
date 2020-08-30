@@ -42,11 +42,9 @@ Raise an issue or a PR. I'm happy to help out! You can also DM me on Twitter @he
 
 ## Build
 
-`cd ./src`
+`make build-linux` or `make build-mac`
 
-`./ink-linux ./build.ink`
-
-(Alternatively, use `./ink-darwin` for macOS.)
+<br>
 
 Note: the programs are written to `/tmp` to get the output. This can also be helpful for debugging.
 
