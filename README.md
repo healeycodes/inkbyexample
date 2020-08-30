@@ -2,9 +2,7 @@
 
 Content and build toolchain for [Ink by Example](https://inkbyexample.com), a site that teaches Ink via annotated example programs.
 
-All tooling is written in Ink too!
-
-The programs are evaluated as part of the build process.
+All tooling is written in Ink and the programs are evaluated as part of the build process.
 
 <br>
 
