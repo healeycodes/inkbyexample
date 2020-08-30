@@ -4,8 +4,6 @@ Content and build toolchain for [Ink by Example](https://inkbyexample.com), a si
 
 All tooling is written in Ink and the programs are evaluated as part of the build process.
 
-I'm still learning Ink so the 
-
 <br>
 
 ## Add an Annotated Program
