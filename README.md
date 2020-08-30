@@ -1,8 +1,10 @@
 # Ink by Example
 
-Content and build toolchain for [Ink by Example](https://inkbyexample.com), a site that teaches Ink via annotated example programs.
+Content and build toolchain for [Ink by Example](https://inkbyexample.com), a site that teaches [Ink](https://dotink.co/) via annotated example programs.
 
 All tooling is written in Ink and the programs are evaluated as part of the build process.
+
+I'm still learning Ink so the 
 
 <br>
 
@@ -34,6 +36,12 @@ end := 'The end section is on the left of the program output.
 
 <br>
 
+## Contributing
+
+Raise an issue or a PR. I'm happy to help out! You can also DM me on Twitter @healeycodes
+
+<br>
+
 ## Build
 
 `cd ./src`
@@ -41,6 +49,10 @@ end := 'The end section is on the left of the program output.
 `./ink-linux ./build.ink`
 
 (Alternatively, use `./ink-darwin` for macOS.)
+
+Note: the programs are written to `/tmp` to get the output. This can also be helpful for debugging.
+
+The website is built to `/public`.
 
 <br>
 
