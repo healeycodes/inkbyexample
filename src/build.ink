@@ -111,34 +111,26 @@ renderExamplePages := (allExamples) => (
 )
 
 ` move over static content `
-moveStatic := (cb) => dir('../static', item => (
+moveStatic := () => dir('../static', item => (
     each(item.data, file => (
         readFile('../static/' + file.name, data => (
             writeFile('../public/' + file.name, data, err => err :: {
                 () -> log('error creating static file: ' + file.name)
-                _ -> cb()
             })
         ))
     ))
 ))
 
 ` setup folders and clear any old files `
-createPublic := cb => make('../public', err => err :: {
+createPublic := (cb) => make('../public', err => err :: {
     () -> log('error creating public folder')
-    _ -> dir('../public', item => each(item.data, file => (
-        delete('../public/' + file.name, err => err :: {
-            () -> log('error deleting public file: ' + file.name)
-            _ -> moveStatic(cb)
-        })
-    )))
+    _ -> (
+        moveStatic()
+        cb()
+    )
 })
 createTmp := () => make('../tmp', err => err :: {
     () -> log('error creating tmp folder')
-    _ -> dir('../tmp', item => each(item.data, file => (
-        delete('../tmp/' + file.name, err => err :: {
-            () -> log('error deleting tmp file: ' + file.name)
-        })
-    )))
 })
 
 readFile('../examples.txt', examples => (
