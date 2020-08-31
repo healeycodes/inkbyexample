@@ -6,6 +6,9 @@ All tooling is written in Ink and the programs are evaluated as part of the buil
 
 <br>
 
+
+Style/structure taken from [Go by Example](https://github.com/mmcgrana/gobyexample) by Mark McGranaghan.
+
 ## Add an Annotated Program
 
 - Add the title to `examples.txt`
@@ -56,8 +59,6 @@ Serve the `/public` directory.
 <br>
 
 ### License
-
-Style/structure taken from [Go by Example](https://github.com/mmcgrana/gobyexample) by Mark McGranaghan.
 
 Go by Example is copyright Mark McGranaghan and licensed under a
 [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
