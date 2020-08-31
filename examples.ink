@@ -3,5 +3,6 @@ all := [
     'Values',
     'Loops',
     'Control Flow',
-    'Lists'
+    'Lists',
+    'Maps'
 ]

@@ -1,4 +1,4 @@
-intro := 'We use the composite value for lists and maps. At runtime, lists are hashmaps with string keys as indices.'
+intro := 'Lists and maps share the same data structure — the composite value. At runtime, lists are hashmaps with string keys representing indices.'
 
 rows := [
     {
@@ -30,9 +30,13 @@ each(names, indexer)
 '
     },
     {
-        docs: 'To access an element we use the dot syntax.'
+        docs: 'To access or mutate an element we use the dot syntax.'
         code: 'log(names.0) `` first element
 log(names.(len(names) - 1)) `` last element
+
+names.0 := \'Madeline\'
+
+log(names)
 '
     }
 ]

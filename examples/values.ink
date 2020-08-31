@@ -27,6 +27,8 @@ log(year)
         code: 'authed := true
 log(authed)
 log(~authed)
+log(true | false)
+log(true & false)
 '
     },
     {
