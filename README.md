@@ -11,7 +11,7 @@ Style/structure taken from [Go by Example](https://github.com/mmcgrana/gobyexamp
 
 ## Add an Annotated Program
 
-- Add the title to `examples.txt`
+- Add the title to `examples.ink`
 - Create a matching Ink program in `/examples` that exports `intro`, `rows`, and `end`.
 - A title of `Foo Bar` needs a program named `foo-bar.ink`
 
@@ -37,6 +37,8 @@ end := 'The end section is on the left of the program output. It can also be lef
 ## Contributing
 
 Raise an issue or a PR. I'm happy to help out! You can also DM me on Twitter @healeycodes
+
+This repository uses Netlify for CI/CD so there's no need to push the build files.
 
 <br>
 

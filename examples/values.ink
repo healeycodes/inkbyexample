@@ -36,10 +36,17 @@ log(exists)
 '
     },
     {
-        docs: 'Ink does not have immutable constants. By convention constant variables start with a capital letter. Otherwise, camelCase is used.'
-        code: 'Language := \'Ink\'
+        docs: 'Composite values, which are used for lists and maps.'
+        code: 'primes := [2, 3, 5, 7]
+log(primes)
+
+cost := {
+    apples: 1.00
+    oranges: 1.50
+}
+log(cost)
 '
-    },
+    }
 ]
 
 end := ''

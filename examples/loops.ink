@@ -1,5 +1,5 @@
-intro := 'In Ink, there isn\'t a <code>for</code> loop construct. Instead, tail recursion is used.
-          The standard library contains utility functions like <code>each</code>, <code>map</code>, <code>reduce</code>, <code>range</code>, and <code>filter</code>.'
+intro := 'Instead of a <code>for</code> loop construct, we use tail recursion.
+          The standard library contains utility functions like <code>each</code>, <code>map</code>, <code>reduce</code>, and <code>filter</code>.'
 
 rows := [
     {
@@ -7,8 +7,10 @@ rows := [
         code: 'std := load(\'../vendor/std\')
 log := std.log
 filter := std.filter
+reduce := std.reduce
 range := std.range
 each := std.each
+map := std.map
 
 start := 1
 end := 9
@@ -16,32 +18,24 @@ step := 1
 '
     },
     {
-        docs: 'Like Python\'s <code>range</code>, we can create a composite value of the numbers 1 through 8 using <code>std.range</code>.'
+        docs: 'Like Python\'s <code>range</code>, we can create a list of the numbers 1 through 8 using <code>std.range</code>.'
         code: 'numbers := range(start, end, step)
 log(numbers)
 '
     },
     {
-        docs: 'We can loop over these numbers with <code>std.each</code>.'
+        docs: 'We can loop over these numbers with <code>std.each</code>, which accepts a list and a function as arguments. Here the function is inlined but it can be defined beforehand too.'
         code: 'each(numbers, num => log(num))
 '
     },
     {
-        docs: 'Perhaps we only want the even numbers.'
-        code: 'evenNumbers := filter(numbers, num => num % 2 :: {
+        docs: 'Let\'s filter out the odd numbers with <code>std.filter</code> and then display them.'
+        code: 'onlyEven := num => num % 2 :: {
     0 -> true
     _ -> false
-})
+}
+evenNumbers := filter(numbers, onlyEven)
 each(evenNumbers, num => log(num))
-'
-    },
-    {
-        docs: 'Or the sum if they were squared.'
-        code: 'squares := map(numbers, num => num * num)
-sumOfSquares := reduce(squares,
-    (acc, item) => acc + item, 0
-)
-log(sumOfSquares)
 '
     }
 ]

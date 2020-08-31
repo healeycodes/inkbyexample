@@ -1,0 +1,51 @@
+intro := 'Instead of <code>if</code>/<code>else</code> branching, match expressions are used for control flow.'
+
+rows := [
+    {
+        docs: ''
+        code: 'std := load(\'../vendor/std\')
+log := std.log
+'
+    },
+    {
+        docs: 'Like the <code>switch</code> expression from other languages, the case clauses are checked from top to bottom. The checking stops when there\'s a hit.'
+        code: 'error := false
+error :: {
+    false -> log(\'No problem!\')
+    true -> log(\'There is a problem..\')
+}
+'
+    },
+    {
+        docs: 'The default or <code>else</code> branch is signified with the underscore character. This will match anything.'
+        code: 'device := \'windows\'
+device :: {
+    \'linux\' -> log(\'Linux!\')
+    \'macOS\' -> log(\'Mac!\')
+    _ -> log(\'Neither Linux or Mac.\')
+}
+'
+    },
+    {
+        docs: 'Composite values are deep compared so the underscore can be used to catch complex objects that, while different, have a similar characteristic.'
+        code: 'first := {
+    code: 2,
+    user: \'alice@google\'
+}
+second := {
+    code: 2,
+    user: \'claire@amazon\'
+}
+
+checkEvent := event => event :: {
+    {code: 2, user: _} -> log(\'All good!\')
+    _ -> log(\'Bad event..\')
+}
+
+checkEvent(first)
+checkEvent(second)
+'
+    }
+]
+
+end := ''
