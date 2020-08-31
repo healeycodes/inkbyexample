@@ -37,7 +37,7 @@ log(exists)
     },
     {
         docs: 'Ink does not have immutable constants. By convention constant variables start with a capital letter. Otherwise, camelCase is used.'
-        code: 'Language := 'Ink'
+        code: 'Language := \'Ink\'
 '
     },
 ]
