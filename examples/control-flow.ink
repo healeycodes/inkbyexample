@@ -4,11 +4,12 @@ rows := [
     {
         docs: ''
         code: 'std := load(\'../vendor/std\')
+filter := std.filter
 log := std.log
 '
     },
     {
-        docs: 'Like the <code>switch</code> expression from other languages, the case clauses are checked from top to bottom. The checking stops when there\'s a hit.'
+        docs: 'Like the <code>switch</code> expression from other languages, the case clauses are checked from top to bottom. The checking stops when there\'s a match.'
         code: 'error := false
 error :: {
     false -> log(\'No problem!\')
@@ -44,6 +45,17 @@ checkEvent := event => event :: {
 
 checkEvent(first)
 checkEvent(second)
+'
+    },
+    {
+        docs: '<code>std.filter</code> can be passed a match expression. Here we use it to filter out odd numbers.'
+        code: 'numbers := [1, 2, 3, 4, 5, 6]
+onlyEven := num => num % 2 :: {
+    0 -> true
+    _ -> false
+}
+even := filter(numbers, onlyEven)
+log(even)
 '
     }
 ]
