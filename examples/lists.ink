@@ -6,7 +6,6 @@ rows := [
         code: 'std := load(\'../vendor/std\')
 log := std.log
 each := std.each
-f := std.format
 
 '
     },
@@ -27,14 +26,11 @@ log(names)
 '
     },
     {
-        docs: 'We imported <code>std.format</code> which allows template strings.'
+        docs: ''
         code: '
 indexer := (name, index) => (
-    values := {
-        index: index
-        name: name
-    }
-    log(f(\'{{ index }} - {{ name }}\', values))
+    log(index)
+    log(name)
 )
 each(names, indexer)
 '

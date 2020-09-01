@@ -7,23 +7,18 @@ rows := [
         code: 'std := load(\'../vendor/std\')
 log := std.log
 reduce := std.reduce
-range := std.range
 each := std.each
 map := std.map
 
-start := 0
-end := 7
-step := 1
 '
     },
     {
-        docs: 'Like Python\'s <code>range</code>, we can create a list of the numbers 0 through 6 using <code>std.range</code>.'
-        code: 'numbers := range(start, end, step)
-log(numbers)
+        docs: ''
+        code: 'numbers := [0, 1, 2, 3, 4, 5, 6]
 '
     },
     {
-        docs: 'We can loop over these numbers with <code>std.each</code>, which accepts a list and a function as arguments.'
+        docs: 'We can loop over this list with <code>std.each</code>, which accepts a list and a function as arguments.'
         code: 'logger := num => log(num)
 each(numbers, logger)
 '
@@ -38,11 +33,6 @@ log(squares)
         docs: 'We can get the sum of these squares by using <code>std.reduce</code>.'
         code: 'sum := reduce(squares, (acc, num) => acc + num, 0)
 log(sum)'
-    },
-    {
-        docs: 'For a full list of utility functions see the standard library <a href="https://dotink.co/docs/lib/">documentation</a>.
-Example usage can be found in the source code of <code>std</code>.'
-        code: ''
     }
 ]
 
