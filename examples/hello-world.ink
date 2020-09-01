@@ -1,8 +1,8 @@
-intro := ''
+intro := 'Our first program will print the classic "hello world" message. Here\'s the full source code.'
 
 rows := [
     {
-        docs: 'Our first program will print the classic "hello world" message. Here\'s the full source code.'
+        docs: 'Ink programs can be imported by calling <code>load</code> and passing the relative path without <code>.ink</code>. Top level values are brought in as a map.'
         code: 'std := load(\'../vendor/std\')
 log := std.log
 
