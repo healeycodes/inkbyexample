@@ -6,6 +6,9 @@ rows := [
         code: 'std := load(\'../vendor/std\')
 log := std.log
 each := std.each
+append := std.append
+slice := std.slice
+range := std.range
 
 '
     },
@@ -33,6 +36,23 @@ indexer := (name, index) => (
     log(name)
 )
 each(names, indexer)
+'
+    },
+    {
+        docs: '<code>std.range</code> works similar to Python\'s <code>range</code>. It takes start, end, and step values and returns a list.'
+        code: '
+numbers := range(0, 6, 1)
+log(numbers)
+'
+    },
+    {
+        docs: 'We can get a sublist with <code>std.slice</code>, and add to the end of a list with <code>std.append</code>.'
+        code: '
+half := slice(numbers, 3)
+log(half)
+
+opposites := append(half, [-1, -2, -3])
+log(opposites)
 '
     }
 ]
