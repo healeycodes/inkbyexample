@@ -1,4 +1,4 @@
-intro := 'Like lists, maps use the composite value — the single built-in data structure. At runtime, maps are hashmaps with string keys.'
+intro := 'Like lists, maps use the composite value — Ink\'s single built-in data structure. At runtime, maps are hashmaps with string keys.'
 
 rows := [
     {
@@ -26,18 +26,18 @@ log(observation)
 '
     },
     {
-        docs: 'An identifier directly following the dot evaluates as a key.'
+        docs: 'If we know the key before runtime, we can use a shortcut and just write it out.'
         code: 'observation.weather := \'Raining\'
 log(observation)
 '
     },
     {
-        docs: '<code>std.clone</code> can be used to create a copy of a composite value so it works for both lists and maps.'
+        docs: '<code>std.clone</code> can be used to create a copy of a map.'
         code: 'cloned := clone(observation)
 '
     },
     {
-        docs: 'Here we iterate through the keys.'
+        docs: 'We can iterate through the keys by calling <code>keys</code>.'
         code: 'each(keys(observation), (key) => (
     log(observation.(key))
 ))

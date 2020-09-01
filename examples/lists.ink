@@ -6,7 +6,7 @@ rows := [
         code: 'std := load(\'../vendor/std\')
 log := std.log
 each := std.each
-append := std.append
+join := std.join
 slice := std.slice
 range := std.range
 
@@ -28,6 +28,12 @@ log(names)
 '
     },
     {
+        docs: 'Like strings, we can append to the end of a list by mutating what would be the next index value.'
+        code: 'names.len(names) := \'Francisca\'
+log(names)
+'
+    },
+    {
         docs: ''
         code: '
 indexer := (name, index) => (
@@ -45,15 +51,15 @@ log(numbers)
 '
     },
     {
-        docs: 'We can get a sublist with <code>std.slice</code>, and add to the end of a list with <code>std.append</code>.'
+        docs: 'We can get a sublist with <code>std.slice</code>, and join two lists to create a third with <code>std.join</code>.'
         code: '
 half := slice(numbers, 0, 3)
 log(half)
 
 first := [98, 99]
 second := [100, 101]
-append(first, second)
-log(first)
+third := join(first, second)
+log(third)
 '
     }
 ]

@@ -8,8 +8,10 @@ log := std.log
 '
     },
     {
-        docs: 'Strings, which can be added together with +.'
+        docs: 'Strings, which can be added together with <code>+</code>, and appended to by mutating what would be the next index value.'
         code: 'name := \'ada\' + \' \' + \'lovelace\'
+log(name)
+name.len(name) := \'!\'
 log(name)
 '
     },
