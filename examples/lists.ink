@@ -50,8 +50,10 @@ log(numbers)
 half := slice(numbers, 0, 3)
 log(half)
 
-opposites := append(half, [-1, -2, -3])
-log(opposites)
+first := [-3, -2, -1, 0]
+second := [1, 2, 3]
+append(first, second)
+log(first)
 '
     }
 ]
