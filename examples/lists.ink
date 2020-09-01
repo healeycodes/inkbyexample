@@ -24,7 +24,6 @@ log(names)
 log(names.(len(names) - 1)) `` last element
 
 names.0 := \'Madeline\'
-
 log(names)
 '
     },
@@ -48,7 +47,7 @@ log(numbers)
     {
         docs: 'We can get a sublist with <code>std.slice</code>, and add to the end of a list with <code>std.append</code>.'
         code: '
-half := slice(numbers, 3)
+half := slice(numbers, 0, 3)
 log(half)
 
 opposites := append(half, [-1, -2, -3])
