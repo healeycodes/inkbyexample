@@ -17,7 +17,17 @@ log(names)
 '
     },
     {
-        docs: 'We imported <code>std.format</code>, which allows template strings, as <code>f</code>.'
+        docs: 'To access or mutate an element we use the dot syntax.'
+        code: 'log(names.0) `` first element
+log(names.(len(names) - 1)) `` last element
+
+names.0 := \'Madeline\'
+
+log(names)
+'
+    },
+    {
+        docs: 'We imported <code>std.format</code> which allows template strings.'
         code: '
 indexer := (name, index) => (
     values := {
@@ -27,16 +37,6 @@ indexer := (name, index) => (
     log(f(\'{{ index }} - {{ name }}\', values))
 )
 each(names, indexer)
-'
-    },
-    {
-        docs: 'To access or mutate an element we use the dot syntax.'
-        code: 'log(names.0) `` first element
-log(names.(len(names) - 1)) `` last element
-
-names.0 := \'Madeline\'
-
-log(names)
 '
     }
 ]

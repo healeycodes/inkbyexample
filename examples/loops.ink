@@ -38,8 +38,12 @@ log(squares)
         docs: 'We can get the sum of these squares by using <code>std.reduce</code>.'
         code: 'sum := reduce(squares, (acc, num) => acc + num, 0)
 log(sum)'
+    },
+    {
+        docs: 'For a full list of utility functions see the standard library <a href="https://dotink.co/docs/lib/">documentation</a>.
+Example usage can be found in the source code of <code>std</code>.'
+        code: ''
     }
 ]
 
-end := 'For a full list of utility functions see the standard library <a href="https://dotink.co/docs/lib/">documentation</a>.
-Example usage can be found in the source code of <code>std</code>.'
+end := ''

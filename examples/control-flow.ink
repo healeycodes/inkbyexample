@@ -9,8 +9,8 @@ log := std.log
 '
     },
     {
-        docs: 'Like the <code>switch</code> expression from other languages, the case clauses are checked from top to bottom. The checking stops when there\'s a match.'
-        code: 'error := false
+        docs: 'Like the <code>switch</code> expression from other programming languages, the case clauses are checked from top to bottom. The checking stops when there\'s a match.'
+        code: 'error := true
 error :: {
     false -> log(\'No problem!\')
     true -> log(\'There is a problem..\')
@@ -18,7 +18,7 @@ error :: {
 '
     },
     {
-        docs: 'The default or <code>else</code> branch is signified with the underscore character. This will match anything.'
+        docs: 'The default or, <code>else</code>, branch is signified with the underscore character. This will match anything.'
         code: 'device := \'windows\'
 device :: {
     \'linux\' -> log(\'Linux!\')

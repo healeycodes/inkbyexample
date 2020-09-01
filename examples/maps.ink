@@ -26,18 +26,18 @@ log(observation)
 '
     },
     {
-        docs: 'An identifer followed by a string is evaluated as a key.'
+        docs: 'An identifier directly following the dot evaluates as a key.'
         code: 'observation.weather := \'Raining\'
 log(observation)
 '
     },
     {
-        docs: '<code>std.clone</code> can be used to create a copy of a map.'
+        docs: '<code>std.clone</code> can be used to create a copy of a composite value so it works for both lists and maps.'
         code: 'cloned := clone(observation)
 '
     },
     {
-        docs: 'We can iterate through the keys by calling <code>keys</code>.'
+        docs: 'Here we iterate through the keys.'
         code: 'each(keys(observation), (key) => (
     log(observation.(key))
 ))

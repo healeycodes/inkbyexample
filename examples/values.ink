@@ -42,7 +42,7 @@ log(exists)
         code: 'primes := [2, 3, 5, 7]
 log(primes)
 
-cost := {
+menu := {
     apples: 1.00
     oranges: 1.50
 }
