@@ -41,7 +41,7 @@ renderIndexPage := (template, examples) => (
     page := f(template, {
         firstExample: replace(lower(examples.0), ' ', '-') + '.html'
         exampleList: exampleList})
-    writeFile('../public/index.html', page, err => err :: {
+    writeFile('../public/index.html', page, result => result :: {
         () -> log('error writing index.html')
     })
 )
@@ -109,7 +109,7 @@ renderExamplePages := (template, examples) => (
                 next: next
             })
 
-            writeFile('../public/' + fileName + '.html', page, err => err :: {
+            writeFile('../public/' + fileName + '.html', page, result => result :: {
                 () -> log('error creating example: ' + example)
             })
         ))
@@ -120,7 +120,7 @@ renderExamplePages := (template, examples) => (
 moveStatic := () => dir('../static', item => (
     each(item.data, file => (
         readFile('../static/' + file.name, data => (
-            writeFile('../public/' + file.name, data, err => err :: {
+            writeFile('../public/' + file.name, data, result => result :: {
                 () -> log('error creating static file: ' + file.name)
             })
         ))
@@ -128,20 +128,26 @@ moveStatic := () => dir('../static', item => (
 ))
 
 ` setup folders `
-createPublic := cb => make('../public', err => err :: {
+createPublic := cb => make('../public', result => result :: {
     () -> log('error creating public folder')
     _ -> (
         moveStatic()
         cb()
     )
 })
-createTmp := () => make('../tmp', err => err :: {
+createTmp := () => make('../tmp', result => result :: {
     () -> log('error creating tmp folder')
 })
 
 examples := load('../examples').all
 createPublic(() => (
-    readFile('../templates/index.html', template => renderIndexPage(template, examples))
-    readFile('../templates/example.html', template => renderExamplePages(template, examples))
+    readFile('../templates/index.html', template => template :: {
+        () -> log('error reading index template')
+        _ -> renderIndexPage(template, examples)
+    })
+    readFile('../templates/example.html', template => template :: {
+        () -> log('error reading example template')
+        _ -> renderExamplePages(template, examples)
+    })
 ))
 createTmp()

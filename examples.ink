@@ -4,5 +4,6 @@ all := [
     'Loops',
     'Control Flow',
     'Lists',
-    'Maps'
+    'Maps',
+    'Functions'
 ]
