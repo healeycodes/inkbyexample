@@ -4,10 +4,9 @@ Content and build toolchain for [Ink by Example](https://inkbyexample.com), a si
 
 All tooling is written in Ink and the programs are evaluated as part of the build process.
 
+Syntax highlighting powered by [September](https://github.com/thesephist/september).
+
 <br>
-
-
-Style/structure taken from [Go by Example](https://github.com/mmcgrana/gobyexample) by Mark McGranaghan.
 
 ## Add an Annotated Program
 
@@ -29,7 +28,7 @@ rows := [
     }
 ]
 
-end := 'The end section is on the left of the program output. It can also be left empty.'
+end := 'The end section is left of the terminal output. It can also be left empty.'
 ```
 
 <br>
@@ -61,6 +60,8 @@ Serve the `/public` directory.
 <br>
 
 ### License
+
+Style/structure taken from [Go by Example](https://github.com/mmcgrana/gobyexample) by Mark McGranaghan.
 
 Go by Example is copyright Mark McGranaghan and licensed under a
 [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
