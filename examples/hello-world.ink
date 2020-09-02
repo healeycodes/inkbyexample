@@ -10,15 +10,15 @@ log(\'hello world\')'
     },
     {
         docs: 'We can add comments using the grave accent (U+0060). Anything between these two characters is commented out.'
-        code: '` A commonly used docstring format `
+        code: '` a commonly used docstring format `
 
 `
-A multiline comment
+a multiline comment
 `
 '
     },
     {
-        docs: 'A double accent will comment the rest of the line.'
+        docs: 'a double accent comments the rest of the line.'
         code: '`` log(\'This should not run!\')
 '
     }

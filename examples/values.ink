@@ -8,20 +8,20 @@ log := std.log
 '
     },
     {
-        docs: 'Strings, which can be added together with <code>+</code>, and appended to by mutating what would be the next index value.'
-        code: 'name := \'ada\' + \' \' + \'lovelace\'
-log(name)
-name.len(name) := \'!\'
-log(name)
-'
-    },
-    {
         docs: 'Numbers, which support arithmetic operations, and more advanced functions using built-in native functions.'
         code: 'length := (0.5 + 2 * 3 / 4 - 5) + ~6 % 7
 log(length)
 
 year := pow(10, 3) * 2 + 20
 log(year)
+'
+    },
+    {
+        docs: 'Strings, which can be added together with <code>+</code>, and appended to by mutating what would be the next index value.'
+        code: 'name := \'ada\' + \' \' + \'lovelace\'
+log(name)
+name.len(name) := \'!\'
+log(name)
 '
     },
     {
@@ -48,7 +48,12 @@ menu := {
     apples: 1.00
     oranges: 1.50
 }
-log(cost)
+log(menu)
+'
+    },
+    {
+        docs: 'We can get the value of a type with <code>type</code>.'
+        code: 'log(type(0))
 '
     }
 ]

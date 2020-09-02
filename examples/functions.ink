@@ -50,7 +50,7 @@ log(multiplyTwenty(4))
 '
     },
     {
-        docs: 'This is also known as currying — functions that immediately evalute and return another function.'
+        docs: 'Functions that immediately evalute and return another function is called currying in functional programming land.'
         code: 'greeting := a => b => a + \' \' + b
 message := greeting(\'Hello there,\')(\'General Kenobi\')
 log(message)
