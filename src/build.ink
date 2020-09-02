@@ -14,6 +14,8 @@ replace := str.replace
 lower := str.lower
 split := str.split
 
+highlight := load('../vendor/highlight').main
+
 ` in order to execute the code examples, they need to be written to disk `
 evaluate := (fileName, source, cb) => (
     writeFile('../tmp/' + fileName + '.ink', source, err => err :: {
@@ -51,7 +53,7 @@ renderExamplePages := (template, examples) => (
         fileName := replace(lower(example), ' ', '-')
         data := load('../examples/' + fileName)
         source := reduce(data.rows, (acc, item) => acc := acc + '
-        ' + item.code, '')
+' + item.code, '')
 
         evaluate(fileName, source, result => (
             ` pages link to the next example if one exists `
@@ -81,7 +83,7 @@ renderExamplePages := (template, examples) => (
                                         </tr>',
                         {
                             docs: item.docs
-                            code: item.code
+                            code: highlight(item.code)
                             class: class
                         })
                     ), f('<tr>
