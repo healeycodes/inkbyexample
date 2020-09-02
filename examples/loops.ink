@@ -1,5 +1,5 @@
 intro := 'Instead of a <code>for</code> loop construct, we use <a href="https://en.wikipedia.org/wiki/Tail_call">tail recursion</a>.
-          The standard library contains utility functions like <code>each</code>, <code>map</code>, and <code>reduce</code>.'
+          The standard library contains utility functions — like <code>each</code>, <code>map</code>, and <code>reduce</code> — that can be used in place of a <code>for</code> loop.'
 
 rows := [
     {
@@ -15,12 +15,12 @@ map := std.map
     {
         docs: ''
         code: 'numbers := [0, 1, 2, 3, 4, 5, 6]
-logger := num => log(num)
 '
     },
     {
         docs: 'We can loop over this list with <code>std.each</code>, which accepts a list and a function as arguments.'
-        code: 'each(numbers, logger)
+        code: 'logger := num => log(num)
+each(numbers, logger)
 '
     },
     {
