@@ -14,7 +14,7 @@ range := std.range
     },
     {
         docs: 'Lists can be declared with array syntax.'
-        code: 'names := [\'Alice\', \'Andrew\', \'Benny\']
+        code: 'names := [\'Alice\', \'Andrew\']
 log(names)
 '
     },
