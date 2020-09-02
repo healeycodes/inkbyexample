@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 /* CSS reset: http://meyerweb.com/eric/tools/css/reset/ */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -44,7 +47,7 @@ table {
 
 /* Layout and typography */
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 20px;
     color: #252519;
@@ -133,8 +136,8 @@ td.code.empty {
     background: #ffffff;
 }
 pre, code {
-    font-size: 14px; line-height: 18px;
-    font-family: 'Menlo', 'Monaco', 'Consolas', 'Lucida Console', monospace;
+    font-size: 15px; line-height: 18px;
+    font-family: 'Roboto Mono', 'Menlo', 'Monaco', 'Consolas', 'Lucida Console', monospace;
 }
 img.copy, img.run {
   height: 16px;
