@@ -18,7 +18,7 @@ a multiline comment
 '
     },
     {
-        docs: 'a double accent comments the rest of the line.'
+        docs: 'A double accent comments the rest of the line.'
         code: '`` log(\'This should not run!\')
 '
     }
