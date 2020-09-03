@@ -20,7 +20,7 @@ error :: {
 '
     },
     {
-        docs: 'The default or, <code>else</code>, branch is signified with the underscore character. This will match anything.'
+        docs: 'The default, or <code>else</code>, branch is signified with the underscore character. This will match anything.'
         code: 'device := \'windows\'
 device :: {
     \'linux\' -> log(\'Linux!\')
