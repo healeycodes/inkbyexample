@@ -45,6 +45,8 @@ resp := {
     headers: {\'Content-Type\': \'text/plain\'}
     body: \'Hello from Ink land!\'
 }
+` this will likely error in this project\'s
+deploy pipeline due to permissions `
 close := listen(\'0.0.0.0:80\', evt => evt.type :: {
     \'error\' -> log(\'Error: \' + evt.message)
     \'req\' -> (evt.end)(resp)
