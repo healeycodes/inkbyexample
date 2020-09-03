@@ -21,7 +21,7 @@ evaluate := (fileName, source, cb) => (
     writeFile('../tmp/' + fileName + '.ink', source, err => err :: {
             () -> log('error creating source code file for: ' + example)
             _ -> (
-                exec(args().0, ['-isolate', '../tmp/' + fileName + '.ink'], '', result => result :: {
+                exec(args().0, ['../tmp/' + fileName + '.ink'], '', result => result :: {
                     () -> log('error executing program for: ' + example)
                     _ -> cb(result)
                 })
