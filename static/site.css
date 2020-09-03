@@ -136,8 +136,12 @@ td.code.empty {
     background: #ffffff;
 }
 pre, code {
-    font-size: 15px; line-height: 18px;
+    font-size: 15px;
+    line-height: 18px;
     font-family: 'Roboto Mono', 'Menlo', 'Monaco', 'Consolas', 'Lucida Console', monospace;
+}
+code {
+    background: #f0f0f0;
 }
 img.copy, img.run {
   height: 16px;

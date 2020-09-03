@@ -6,6 +6,7 @@ rows := [
         code: 'std := load(\'../vendor/std\')
 filter := std.filter
 log := std.log
+
 '
     },
     {
@@ -15,6 +16,7 @@ error :: {
     false -> log(\'No problem!\')
     true -> log(\'There is a problem..\')
 }
+
 '
     },
     {
@@ -25,6 +27,7 @@ device :: {
     \'macOS\' -> log(\'Mac!\')
     _ -> log(\'Neither Linux or Mac.\')
 }
+
 '
     },
     {
@@ -45,6 +48,7 @@ checkEvent := event => event :: {
 
 checkEvent(first)
 checkEvent(second)
+
 '
     },
     {
@@ -56,6 +60,7 @@ onlyEven := num => num % 2 :: {
 }
 even := filter(numbers, onlyEven)
 log(even)
+
 '
     }
 ]

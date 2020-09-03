@@ -15,7 +15,7 @@ tokenize := Tokenize.tokenizeWithComments
 
 ` associating token types with their highlight colors `
 colorFn := tok => tok.type :: {
-	(Tok.Separator) -> s => '<span class="c">' + s + '</span>'
+	(Tok.Separator) -> s => s
 
 	(Tok.Comment) -> s => '<span class="c">' + s + '</span>'
 

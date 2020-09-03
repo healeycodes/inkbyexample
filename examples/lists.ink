@@ -5,10 +5,12 @@ rows := [
         docs: ''
         code: 'std := load(\'../vendor/std\')
 log := std.log
-each := std.each
-join := std.join
+reverse := std.reverse
 slice := std.slice
 range := std.range
+each := std.each
+join := std.join
+
 
 '
     },
@@ -16,6 +18,7 @@ range := std.range
         docs: 'Lists can be declared with array syntax.'
         code: 'names := [\'Alice\', \'Andrew\']
 log(names)
+
 '
     },
     {
@@ -25,12 +28,14 @@ log(names.(len(names) - 1)) `` last element
 
 names.0 := \'Madeline\'
 log(names)
+
 '
     },
     {
         docs: 'Like strings, we can append to the end of a list by mutating what would be the next index value.'
         code: 'names.len(names) := \'Francisca\'
 log(names)
+
 '
     },
     {
@@ -41,6 +46,7 @@ indexer := (name, index) => (
     log(name)
 )
 each(names, indexer)
+
 '
     },
     {
@@ -48,6 +54,7 @@ each(names, indexer)
         code: '
 numbers := range(0, 6, 1)
 log(numbers)
+
 '
     },
     {
@@ -60,6 +67,13 @@ first := [98, 99]
 second := [100, 101]
 third := join(first, second)
 log(third)
+
+'
+    },
+    {
+        docs: 'To reverse, use <code>std.reverse</code>. For other list utilities, refer to the <a href="https://dotink.co/docs/lib/">standard library</a>.'
+        code: '
+log(reverse([\'one\', \'two\', \'three\', ]))
 '
     }
 ]

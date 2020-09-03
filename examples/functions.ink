@@ -5,6 +5,7 @@ rows := [
         docs: ''
         code: 'std := load(\'../vendor/std\')
 log := std.log
+
 '
     },
     {
@@ -15,6 +16,7 @@ log(shout(\'Hello\'))
 
 multiply := (x, y) => x * y
 log(multiply(2, 8))
+
 '
     },
     {
@@ -27,6 +29,17 @@ sayAndMultiply := num => (
     num * num
 )
 log(sayAndMultiply(8))
+
+'
+    },
+    {
+        docs: 'Function invocation <code>()</code> takes precedence over property-access <code>.</code> — instead of <code>obj.func(argument)</code>, we use <code>(obj.func)(argument)</code>.'
+        code: 'math := {
+    swapSign: n => 0 - n
+}
+weight := (math.swapSign)(100)
+log(weight)
+
 '
     },
     {
@@ -36,6 +49,7 @@ log(sayAndMultiply(8))
     _ -> n * factorial(n-1)
 }
 log(factorial(5))
+
 '
     },
     {
@@ -47,6 +61,7 @@ multiplySeven := makeMultiplier(7)
 multiplyTwenty := makeMultiplier(20)
 log(multiplySeven(2))
 log(multiplyTwenty(4))
+
 '
     },
     {

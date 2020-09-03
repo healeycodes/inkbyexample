@@ -5,6 +5,7 @@ rows := [
         docs: ''
         code: 'std := load(\'../vendor/std\')
 log := std.log
+
 '
     },
     {
@@ -14,6 +15,7 @@ log(length)
 
 year := pow(10, 3) * 2 + 20
 log(year)
+
 '
     },
     {
@@ -22,6 +24,7 @@ log(year)
 log(name)
 name.len(name) := \'!\'
 log(name)
+
 '
     },
     {
@@ -31,12 +34,14 @@ log(authed)
 log(~authed)
 log(true | false)
 log(true & false)
+
 '
     },
     {
         docs: 'Null.'
         code: 'exists := ()
 log(exists)
+
 '
     },
     {
@@ -49,11 +54,13 @@ menu := {
     oranges: 1.50
 }
 log(menu)
+
 '
     },
     {
         docs: 'We can get the value of a type with <code>type</code>.'
         code: 'log(type(0))
+
 '
     }
 ]

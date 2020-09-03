@@ -6,7 +6,8 @@ rows := [
         code: 'std := load(\'../vendor/std\')
 log := std.log
 
-log(\'hello world\')'
+log(\'hello world\')
+'
     },
     {
         docs: 'We can add comments using the grave accent (U+0060). Anything between these two characters is commented out.'
@@ -15,6 +16,7 @@ log(\'hello world\')'
 `
 a multiline comment
 `
+
 '
     },
     {

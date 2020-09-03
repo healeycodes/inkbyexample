@@ -15,18 +15,21 @@ map := std.map
     {
         docs: ''
         code: 'numbers := [0, 1, 2, 3, 4, 5, 6]
+
 '
     },
     {
         docs: 'We can loop over this list with <code>std.each</code>, which accepts a list and a function as arguments.'
         code: 'logger := num => log(num)
 each(numbers, logger)
+
 '
     },
     {
         docs: 'Let\'s create a new list with the squares of these numbers with <code>std.map</code>.'
         code: 'squares := map(numbers, num => num * num)
 log(squares)
+
 '
     },
     {

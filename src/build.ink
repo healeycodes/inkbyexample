@@ -14,7 +14,7 @@ replace := str.replace
 lower := str.lower
 split := str.split
 
-highlight := load('../vendor/highlight').main
+highlight := load('highlight').main
 
 ` in order to execute the code examples, they need to be written to disk `
 evaluate := (fileName, source, cb) => (
