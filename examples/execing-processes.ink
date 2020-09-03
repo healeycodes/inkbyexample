@@ -1,4 +1,4 @@
-intro := ''
+intro := 'Ink can spawn child processes. The stdout data is passed to a callback when the process ends.'
 
 rows := [
     {
@@ -6,6 +6,7 @@ rows := [
         code: 'std := load(\'../vendor/std\')
 each := std.each
 log := std.log
+
 
 '
     },
@@ -20,7 +21,7 @@ exec(path, arguments, stdin, stdoutFn)
 '
     },
     {
-        docs: 'Tangibly related is getting the command-line arguments for the current context.'
+        docs: '<code>args</code> gives us the command-line arguments for the current context. This can be useful if you\'re chaining Ink programs.'
         code: '
 log(\'Arguments:\')
 each(args(), arg => log(\'  \' + arg))
