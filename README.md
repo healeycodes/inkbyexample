@@ -8,6 +8,10 @@ Syntax highlighting powered by [September](https://github.com/thesephist/septemb
 
 <br>
 
+![Image of httsp://inkbyexample.com](https://github.com/healeycodes/inkbyexample/blob/main/static/preview.png)
+
+<br>
+
 ## Add an Annotated Program
 
 - Add the title to `examples.ink`
@@ -35,9 +39,7 @@ end := 'The end section is left of the terminal output. It can also be left empt
 
 ## Contributing
 
-Raise an issue or a PR. I'm happy to help out! You can also DM me on Twitter @healeycodes
-
-This repository uses Netlify for CI/CD so there's no need to push the build files.
+Raise an issue before starting a PR. **I'm happy to help out!** You can also DM me on Twitter @healeycodes
 
 <br>
 
@@ -55,7 +57,9 @@ The website is built to `/public`.
 
 ## Deploy
 
-Serve the `/public` directory.
+This repository uses Netlify for CI/CD and there's a `netlify.toml` with the configuration required.
+
+Otherwise, serve the `/public` directory.
 
 <br>
 
