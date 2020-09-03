@@ -135,6 +135,9 @@ td.code.leading {
 td.code.empty {
     background: #ffffff;
 }
+pre {
+    white-space: pre-wrap;
+}
 pre, code {
     font-size: 15px;
     line-height: 18px;

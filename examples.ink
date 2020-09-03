@@ -5,5 +5,8 @@ all := [
     'Control Flow',
     'Lists',
     'Maps',
-    'Functions'
+    'Functions',
+    'Files',
+    'HTTP',
+    'Execing Processes'
 ]
