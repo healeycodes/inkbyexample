@@ -1,5 +1,4 @@
-` september syntax highlighter command
-  adapted for inkbyexample for HTML highlighting `
+` adapted from https://github.com/thesephist/september to enabled HTML syntax highlighting `
 
 std := load('../vendor/std')
 
@@ -32,7 +31,7 @@ colorFn := tok => tok.type :: {
 
 	(Tok.FunctionArrow) -> s => '<span class="nf">' + s + '</span>'
 
-	` operators are all red `
+	` operators are all Name.Function color `
 	(Tok.KeyValueSeparator) -> s => '<span class="nf">' + s + '</span>'
 	(Tok.DefineOp) -> s => '<span class="nf">' + s + '</span>'
 	(Tok.MatchColon) -> s => '<span class="nf">' + s + '</span>'
@@ -63,7 +62,7 @@ main := prog => (
 	tokens := tokenize(prog)
 	spans := map(tokens, (tok, i) => {
 		colorFn: [tok.type, tokens.(i + 1)] :: {
-			` direct function calls are marked green
+			` direct function calls are marked Name.Function color
 				on a best-effort basis `
 			[
 				Tok.Ident

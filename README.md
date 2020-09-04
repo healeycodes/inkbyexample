@@ -47,11 +47,15 @@ Raise an issue before starting a PR. **I'm happy to help out!** You can also DM 
 
 `make build-linux` or `make build-mac`
 
+The website is built to `/public`.
+
 <br>
 
-Note: the programs are written to `/tmp` to get the output. This can also be helpful for debugging.
+## Test
 
-The website is built to `/public`.
+Not a super mature test setup but you can check stdout after testing for any errors in the example programs.
+
+`make test-linux` or `make test-mac`
 
 <br>
 
