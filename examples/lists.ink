@@ -32,7 +32,7 @@ log(names)
 '
     },
     {
-        docs: 'Like strings, we can append to the end of a list by mutating what would be the next index value.'
+        docs: 'Like strings, we can append to the end of a list by mutating the next index value.'
         code: 'names.len(names) := \'Francisca\'
 log(names)
 

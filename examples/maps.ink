@@ -16,7 +16,7 @@ log := std.log
         code: 'observation := {
     weather: \'Sunny\'
     \'observedAt\': {
-        time: 124125412
+        time: time()
     }
 }
 log(observation)

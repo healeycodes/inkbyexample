@@ -20,9 +20,10 @@ log(year)
 '
     },
     {
-        docs: 'Strings, which can be added together with <code>+</code>, and appended to by mutating what would be the next index value.'
+        docs: 'Strings, which can be added together with <code>+</code>, and appended to by mutating the next index value.'
         code: 'name := \'ada\' + \' \' + \'lovelace\'
 log(name)
+name.0 := \'A\'
 name.len(name) := \'!\'
 log(name)
 

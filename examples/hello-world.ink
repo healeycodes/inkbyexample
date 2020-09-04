@@ -2,7 +2,7 @@ intro := 'Our first program will print the classic "hello world" message. Here\'
 
 rows := [
     {
-        docs: 'Ink programs can be imported by calling <code>load</code> and passing the relative path without <code>.ink</code>. Top level values are brought in as a map.'
+        docs: 'Ink programs are imported by calling <code>load</code> and passing the relative path without <code>.ink</code>. Top level values are brought in as a map.'
         code: 'std := load(\'../vendor/std\')
 log := std.log
 
@@ -11,11 +11,11 @@ log(\'hello world\')
 '
     },
     {
-        docs: 'We can add comments using the grave accent (U+0060). Anything between these two characters is commented out.'
-        code: '` a commonly used docstring format `
+        docs: 'We can add comments using the grave accent (U+0060).'
+        code: '` a single line comment `
 
 `
-a multiline comment
+a multi-line comment
 `
 
 '

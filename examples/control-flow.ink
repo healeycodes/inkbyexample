@@ -46,7 +46,6 @@ checkEvent := event => event :: {
     {code: 2, user: _} -> log(\'All good!\')
     _ -> log(\'Bad event..\')
 }
-
 checkEvent(first)
 checkEvent(second)
 

@@ -20,7 +20,7 @@ map := std.map
 '
     },
     {
-        docs: 'We can loop over this list with <code>std.each</code>, which accepts a list and a function as arguments.'
+        docs: 'We can loop over a list with <code>std.each</code>, which accepts a list and a function as arguments.'
         code: 'logger := num => log(num)
 each(numbers, logger)
 
