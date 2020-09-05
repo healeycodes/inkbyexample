@@ -8,5 +8,7 @@ all := [
     'Functions',
     'Files',
     'HTTP',
+    'Random',
+    'Sorting',
     'Execing Processes'
 ]
