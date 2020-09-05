@@ -19,7 +19,7 @@ Syntax highlighting powered by [September](https://github.com/thesephist/septemb
 - A title of `Foo Bar` needs a program named `foo-bar.ink`
 
 ```
-intro := 'The introduction precedes the code sections. Recommended to contain content.'
+intro := 'The introduction precedes the code sections. It should not be left empty.'
 
 rows := [
     {
