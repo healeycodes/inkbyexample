@@ -1,4 +1,4 @@
-intro := 'Functions are the building blocks of Ink and enable us to write terse functional code. Everything is an expression that evaluates to a value.'
+intro := 'Functions are the building blocks of Ink and enable us to write terse functional code.'
 
 rows := [
     {

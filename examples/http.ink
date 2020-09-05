@@ -1,4 +1,4 @@
-intro := 'Ink can both send and receive HTTP requests. Both have a similar event shape.'
+intro := 'Ink can both send and receive HTTP requests.'
 
 rows := [
     {

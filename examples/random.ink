@@ -1,4 +1,4 @@
-intro := 'We can access randomness through two builtins. On Linux they typically map to <code>/dev/random</code> and <code>/dev/urandom</code>.'
+intro := 'We can access randomness through two builtins — <code>rand</code> and <code>urand</code>. On Linux they typically map to <code>/dev/random</code> and <code>/dev/urandom</code>.'
 
 rows := [
     {
