@@ -67,9 +67,17 @@ Otherwise, serve the `/public` directory.
 
 <br>
 
-### License
+## Thanks to
 
-Style/structure taken from [Go by Example](https://github.com/mmcgrana/gobyexample) by Mark McGranaghan.
+[@thesephist](https://github.com/thesephist) for creating the Ink programming language, writing the `SPEC.md` and amazing documentation at https://dotink.co/ which served as a jumping off point.
+
+Mark McGranaghan for creating the original [Go by Example](https://github.com/mmcgrana/gobyexample) which provided styling and structure for this project.
+
+<br>
+
+## License
+
+Style/structure taken from by Mark McGranaghan.
 
 Go by Example is copyright Mark McGranaghan and licensed under a
 [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
