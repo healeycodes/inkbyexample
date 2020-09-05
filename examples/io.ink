@@ -12,7 +12,7 @@ f := std.format
 '
     },
     {
-        docs: 'To send data to standard out we can use the builtin <code>out</code>, which accepts a string, or the helper <code>std.log</code> which accepts non-strings too and adds a linebreak.'
+        docs: 'To send data to standard out we can use the builtin <code>out</code>, which accepts a string, or the helper <code>std.log</code> which accepts strings and non-strings and adds a linebreak.'
         code: 'out(\'Hello, with a manual linebreak.
 \')
 log(7) `` print a number
