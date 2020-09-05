@@ -19,7 +19,7 @@ Syntax highlighting powered by [September](https://github.com/thesephist/septemb
 - A title of `Foo Bar` needs a program named `foo-bar.ink`
 
 ```
-intro := 'The introduction precedes the code sections. It can be left empty.'
+intro := 'The introduction precedes the code sections. Recommended to contain content.'
 
 rows := [
     {
@@ -32,7 +32,7 @@ rows := [
     }
 ]
 
-end := 'The end section is left of the terminal output. It can also be left empty.'
+end := 'The end section is left of the terminal output. It can be left empty.'
 ```
 
 <br>
@@ -53,9 +53,9 @@ The website is built to `/public`.
 
 ## Test
 
-Not a super mature test setup but you can check stdout after testing for any errors in the example programs.
-
 `make test-linux` or `make test-mac`
+
+Check stdout for runtime errors.
 
 <br>
 
