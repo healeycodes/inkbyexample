@@ -1,6 +1,7 @@
 all := [
     'Hello World',
     'Values',
+    'IO',
     'Loops',
     'Control Flow',
     'Lists',

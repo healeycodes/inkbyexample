@@ -1,5 +1,5 @@
 intro := 'Instead of a <code>for</code> loop construct, we use <a href="https://en.wikipedia.org/wiki/Tail_call">tail recursion</a>.
-          The standard library contains utility functions — like <code>each</code>, <code>map</code>, and <code>reduce</code> — that can be used in place of a <code>for</code> loop.'
+          The standard library contains utility functions — like <code>std.each</code>, <code>std.map</code>, and <code>std.reduce</code> — that can be used in place of a <code>for</code> loop.'
 
 rows := [
     {

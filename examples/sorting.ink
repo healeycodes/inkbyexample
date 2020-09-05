@@ -15,14 +15,14 @@ sort := qs.sort
 '
     },
     {
-        docs: 'We can sort a list in ascending order with <code>sort</code>.'
+        docs: 'We can sort a list in ascending order with <code>quicksort.sort</code>.'
         code: 'numbers := [921, 14, 0, 0.002]
 log(sort(numbers))
 
 '
     },
     {
-        docs: 'Function definitions that end in <code>!</code> mutate their arguments — like <code>sort!</code>.'
+        docs: 'Function definitions that end in <code>!</code> mutate their arguments — like <code>quicksort.sort!</code>.'
         code: 'temperatures := [33, 1, 5, 22]
 sort!(temperatures)
 
@@ -32,7 +32,7 @@ log(temperatures)
 '
     },
     {
-        docs: '<code>sortBy</code> allows us to pass a predicate — a function that each item should be measured with.'
+        docs: '<code>quicksort.sortBy</code> allows us to pass a predicate — a function that each item should be measured with.'
         code: 'menu := {
     apples: 1.50
     oranges: 2.00
