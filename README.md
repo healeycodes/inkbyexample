@@ -19,7 +19,7 @@ Syntax highlighting powered by [September](https://github.com/thesephist/septemb
 - A title of `Foo Bar` needs a program named `foo-bar.ink`
 
 ```
-intro := 'The introduction precedes the code sections. Recommended to contain content.'
+intro := 'The introduction precedes the code sections. It should not be left empty.'
 
 rows := [
     {
@@ -39,7 +39,7 @@ end := 'The end section is left of the terminal output. It can be left empty.'
 
 ## Contributing
 
-Raise an issue before starting a PR. **I'm happy to help out!** You can also DM me on Twitter @healeycodes
+Raise an issue before starting a PR. **I'm happy to help out!** You can also DM me on Twitter [@healeycodes](https://twitter.com/healeycodes)
 
 <br>
 
@@ -67,9 +67,15 @@ Otherwise, serve the `/public` directory.
 
 <br>
 
-### License
+## Thanks to
 
-Style/structure taken from [Go by Example](https://github.com/mmcgrana/gobyexample) by Mark McGranaghan.
+[@thesephist](https://github.com/thesephist) for creating the Ink programming language, writing the `SPEC.md` and amazing documentation at https://dotink.co/ which served as a jumping off point.
+
+Mark McGranaghan for creating the original [Go by Example](https://github.com/mmcgrana/gobyexample) which provided styling and structure for this project.
+
+<br>
+
+## License
 
 Go by Example is copyright Mark McGranaghan and licensed under a
 [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
