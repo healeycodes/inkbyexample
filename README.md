@@ -39,7 +39,7 @@ end := 'The end section is left of the terminal output. It can be left empty.'
 
 ## Contributing
 
-Raise an issue before starting a PR. **I'm happy to help out!** You can also DM me on Twitter @healeycodes
+Raise an issue before starting a PR. **I'm happy to help out!** You can also DM me on Twitter [@healeycodes](https://twitter.com/healeycodes)
 
 <br>
 
