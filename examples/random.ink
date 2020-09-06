@@ -26,10 +26,11 @@ numbers := range(0, 10, 1)
 
 shuffle := list => (
     each(list, (val, i) => (
-        position := floor(rand() * len(list))
-        tmp := list.(i)
-        list.(i) := list.(position)
-        list.(position) := tmp
+        pick := floor(rand() * (len(list) - i - 1))
+        current := len(list) - 1 - i
+        tmp := list.(current)
+        list.(current) := list.(pick)
+        list.(pick) := tmp
     ))
     list
 )
