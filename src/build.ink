@@ -18,12 +18,12 @@ highlight := load('highlight').main
 
 ` in order to execute the code examples, they need to be written to disk `
 evaluate := (fileName, source, cb) => (
-    writeFile('../tmp/' + fileName + '.ink', source, err => err :: {
+    writeFile('../tmp/' + fileName + '.ink', source, result => result :: {
             () -> log('error creating source code file for: ' + example)
             _ -> (
-                exec(args().0, ['../tmp/' + fileName + '.ink'], '', result => result :: {
+                exec(args().0, ['../tmp/' + fileName + '.ink'], '', output => output :: {
                     () -> log('error executing program for: ' + example)
-                    _ -> cb(result)
+                    _ -> cb(output)
                 })
             )
     })
