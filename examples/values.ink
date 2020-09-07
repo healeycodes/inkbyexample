@@ -17,6 +17,9 @@ log(length)
 year := pow(10, 3) * 2 + 20
 log(year)
 
+` write negative literals with the negation operator (~) `
+temperature := ~5
+
 '
     },
     {
