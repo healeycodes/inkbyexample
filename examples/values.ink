@@ -14,11 +14,12 @@ log := std.log
         code: 'length := (0.5 + 2 * 3 / 4 - 5) + ~6 % 7
 log(length)
 
+` a negative literal `
+temperature := ~5
+log(temperature)
+
 year := pow(10, 3) * 2 + 20
 log(year)
-
-` write negative literals with the negation operator (~) `
-temperature := ~5
 
 '
     },
