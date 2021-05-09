@@ -8,7 +8,7 @@ Syntax highlighting powered by [September](https://github.com/thesephist/septemb
 
 <br>
 
-[![Image of httsp://inkbyexample.com](https://github.com/healeycodes/inkbyexample/blob/main/static/preview.png)](https://inkbyexample.com/)
+[![Image of https://inkbyexample.com](https://github.com/healeycodes/inkbyexample/blob/main/static/preview.png)](https://inkbyexample.com/)
 
 <br>
 
