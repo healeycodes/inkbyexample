@@ -15,6 +15,7 @@ lower := str.lower
 split := str.split
 
 highlight := load('highlight').main
+urlEncode := load('utils').urlEncode
 
 ` in order to execute the code examples, they need to be written to disk `
 evaluate := (fileName, source, cb) => (
@@ -82,10 +83,15 @@ renderExamplePages := (template, examples) => (
                                             <td class="code leading {{ class }}">
                                                 <pre>{{ code }}</pre>
                                             </td>
+                                            <td>
+                                                <a href="https://play.dotink.co/?code={{ codeURL }}">
+                                                    <img title="Run code" src="pen-16x16.png" srcset="pen-32x32.png 2x" class="run" />
+                                                </a>
                                         </tr>',
                         {
                             docs: item.docs
                             code: highlight(item.code)
+                            codeURL: urlEncode(item.code)
                             class: class
                         })
                     ), f('<tr>
