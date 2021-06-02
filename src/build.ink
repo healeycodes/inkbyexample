@@ -29,7 +29,7 @@ evaluate := (fileName, source, cb) => (
     })
 )
 
-renderIndexPage := (template, examples) => (
+renderIndexPage := (template, examples, inkVersion) => (
     ` render the index page with the list of examples and links `
     exampleList := reduce(examples, (acc, item) => (
         acc := acc + f('<li>
@@ -42,7 +42,9 @@ renderIndexPage := (template, examples) => (
     
     page := f(template, {
         firstExample: replace(lower(examples.0), ' ', '-') + '.html'
-        exampleList: exampleList})
+        exampleList: exampleList
+        inkVersion: inkVersion
+    })
     writeFile('../public/index.html', page, result => result :: {
         () -> log('error writing index.html')
     })
@@ -143,10 +145,21 @@ createTmp := () => make('../tmp', result => result :: {
 
 examples := load('../examples').all
 createPublic(() => (
-    readFile('../templates/index.html', template => template :: {
-        () -> log('error reading index template')
-        _ -> renderIndexPage(template, examples)
+
+    ` grab the ink version `
+    readFile('../.ink-version', inkVersion => inkVersion :: {
+        () -> log('error reading .ink-version')
+        _ -> (
+
+            ` render index page `
+            readFile('../templates/index.html', template => template :: {
+                () -> log('error reading index template')
+                _ -> renderIndexPage(template, examples, inkVersion)
+            })
+        )
     })
+
+    ` render example pages `
     readFile('../templates/example.html', template => template :: {
         () -> log('error reading example template')
         _ -> renderExamplePages(template, examples)
