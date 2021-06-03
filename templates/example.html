@@ -2,45 +2,52 @@
 <html lang="en">
   <head>
     <!-- GoatCounter -->
-    <script data-goatcounter="https://inkbyexample.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script
+      data-goatcounter="https://inkbyexample.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
     <noscript>
-      <img src="https://inkbyexample.goatcounter.com/count?p={{ name }}"/>
+      <img src="https://inkbyexample.goatcounter.com/count?p={{ name }}" />
     </noscript>
 
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Ink by Example — {{ name }}</title>
-    <meta property="og:title" content="Ink by Example — {{ name }}">
-    <meta property="og:site_name" content="Ink by Example: {{ name }}">
-    <meta property="og:url" content="https://inkbyexample.com/">
-    <meta name="description" content="Ink by Example — {{ name }}."/>
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://inkbyexample.com/preview.png">
+    <meta property="og:title" content="Ink by Example — {{ name }}" />
+    <meta property="og:site_name" content="Ink by Example: {{ name }}" />
+    <meta property="og:url" content="https://inkbyexample.com/" />
+    <meta name="description" content="Ink by Example — {{ name }}." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://inkbyexample.com/preview.png" />
 
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:description" content="Ink by Example — {{ name }}."/>
-    <meta name="twitter:title" content="Ink by Example: {{ name }}"/>
-    <meta name="twitter:site" content="@healeycodes"/>
-    <meta name="twitter:image" content="https://inkbyexample.com/preview.png"/>
-    <meta name="twitter:creator" content="@healeycodes"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Ink by Example — {{ name }}." />
+    <meta name="twitter:title" content="Ink by Example: {{ name }}" />
+    <meta name="twitter:site" content="@healeycodes" />
+    <meta name="twitter:image" content="https://inkbyexample.com/preview.png" />
+    <meta name="twitter:creator" content="@healeycodes" />
 
-    <link rel=stylesheet href="site.css">
+    <link rel="stylesheet" href="site.css" />
   </head>
   <body>
     <div class="example">
-      <h2>
-        <a href="./">Ink by Example</a>: {{ name }}</h2>
+      <h2><a href="./">Ink by Example</a>: {{ name }}</h2>
 
-      <table>
-        {{ rows }}
-        {{ program }}
+      <table class="program">
+        {{ rows }} {{ program }}
       </table>
 
       {{ next }}
 
       <p class="footer">
-        by <a href="https://healeycodes.com">Andrew Healey</a> | <a href="https://github.com/healeycodes/inkbyexample">source</a> | <a href="https://github.com/healeycodes/inkbyexample#license">license</a>
+        by <a href="https://healeycodes.com">Andrew Healey</a> |
+        <a href="https://github.com/healeycodes/inkbyexample">source</a> |
+        <a href="https://github.com/healeycodes/inkbyexample#license"
+          >license</a
+        >
       </p>
     </div>
+    <pre class="source">{{ source }}</pre>
+    <script src="example.js"></script>
   </body>
 </html>
