@@ -27,7 +27,4 @@ a multi-line comment
     }
 ]
 
-
-
-
 end := 'To run the program, put the code in <code>hello-world.ink</code> and run it with the interpreter.'

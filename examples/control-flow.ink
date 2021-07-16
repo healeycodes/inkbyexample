@@ -32,6 +32,16 @@ device :: {
 '
     },
     {
+        docs: 'A match target can be an expression.'
+        code: 'greeting := \'Hello!\'
+greeting :: {
+    \'Hello\' -> log(\'They greeted us.\')
+    \'Hello\' + \'!\' -> log(\'They greeted us loudly.\')
+}
+
+'
+    },
+    {
         docs: 'Composite values are deep compared so the underscore can be used to catch complex objects that, while different, have a similar characteristic.'
         code: 'first := {
     code: 2,
