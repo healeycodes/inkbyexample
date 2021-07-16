@@ -1,3 +1,5 @@
+[![CI](https://github.com/healeycodes/inkbyexample/actions/workflows/ink.yml/badge.svg)](https://github.com/healeycodes/inkbyexample/actions/workflows/ink.yml)
+
 # Ink by Example
 
 Content and build toolchain for [Ink by Example](https://inkbyexample.com), a site that teaches [Ink](https://dotink.co/) via annotated example programs.
